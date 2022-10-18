@@ -1,11 +1,15 @@
+import {useContext} from "react";
+import {ShopContext} from "../context";
+
 function Item(props) {
+    const {addToBasket} = useContext(ShopContext);
+
     const {
         id,
         name,
         description,
         price,
         full_background,
-        addToBasket = Function.prototype
     } = props;
 
     return(
